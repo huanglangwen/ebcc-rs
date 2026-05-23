@@ -300,7 +300,6 @@ pub fn ebcc_decode_into(
     };
 
     decompressed_data.assign(&decompressed_view);
-
     #[expect(unsafe_code)]
     unsafe {
         ebcc_sys::free_buffer(out_buffer.cast::<core::ffi::c_void>());
